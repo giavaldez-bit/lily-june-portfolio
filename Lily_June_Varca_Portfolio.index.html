@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lily June Varca's professional portfolio, featuring her work experience, administrative and e-commerce experience, skills, tools, and contact information.">
+<title>Lily June Varca | Professional Portfolio</title>
+<style>
+:root{--navy:#14263f;--navy2:#203954;--brown:#b59a7b;--brown-dark:#806b55;--cream:#f5f0e9;--paper:#fffdf9;--ink:#293442;--muted:#68717b;--line:#e7ded3;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.topbar{position:sticky;top:0;z-index:5;background:rgba(20,38,63,.97);color:#f8f5f0;padding:16px 7%;display:flex;justify-content:space-between;align-items:center;gap:22px;border-bottom:1px solid rgba(203,178,147,.25)}
+.brand{font:12px Arial,sans-serif;letter-spacing:2.5px;text-transform:uppercase;white-space:nowrap}
+nav{display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end}
+nav a{font:10px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;color:#e9e2d8;opacity:.92}
+nav a:hover{color:#d6bea1}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--navy) 0%,#1c344f 70%,#354b60 100%);color:white;padding:105px 9% 100px}
+.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(213,190,163,.32);border-radius:50%;right:-115px;top:-180px;box-shadow:0 0 0 32px rgba(213,190,163,.035),0 0 0 70px rgba(213,190,163,.025)}
+.eyebrow,.section-label,.card-kicker{font:10px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#cbb293}
+h1{font-size:clamp(46px,7vw,82px);font-weight:400;line-height:1.04;margin:22px 0 18px;max-width:820px}
+.hero .subtitle{font:16px/1.8 Arial,sans-serif;color:#e1e6eb;max-width:650px;margin:0 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 21px;border:1px solid #d6bea1;font:10px Arial,sans-serif;letter-spacing:1.4px;text-transform:uppercase;color:white}
+.btn.primary{background:#d6bea1;color:var(--navy);font-weight:bold}
+.section{padding:76px 9%;max-width:1440px;margin:auto}
+.section.alt{max-width:none;background:var(--cream)}
+.inner{max-width:1180px;margin:auto}
+h2{font-size:clamp(30px,4vw,44px);font-weight:400;line-height:1.2;color:var(--navy);margin:12px 0 18px}
+.intro{font:14px/1.9 Arial,sans-serif;color:var(--muted);max-width:820px;margin:0}
+.about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:58px;align-items:start}
+.about-note{border-left:3px solid var(--brown);padding:8px 0 8px 24px;color:var(--navy);font-size:23px;line-height:1.5}
+.about-copy{font:14px/1.95 Arial,sans-serif;color:var(--muted);max-width:790px;margin-top:22px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:32px}
+.card{background:var(--white);border:1px solid var(--line);padding:25px 24px;min-height:178px}
+.card-kicker{color:var(--brown-dark);font-size:9px}
+.card h3{font-size:19px;font-weight:400;color:var(--navy);line-height:1.35;margin:12px 0 9px}
+.card p{font:12px/1.8 Arial,sans-serif;color:var(--muted);margin:0}
+.experience-list{display:grid;gap:19px;margin-top:32px}
+.experience-card{position:relative;background:#fffdf9;border:1px solid var(--line);border-left:4px solid var(--brown);padding:26px 30px}
+.number{font:10px Arial,sans-serif;letter-spacing:2px;color:var(--brown-dark);margin-bottom:9px}
+.experience-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.experience-card h3{font-size:22px;font-weight:400;color:var(--navy);margin:0 0 5px}
+.company,.date{font:12px/1.7 Arial,sans-serif;color:var(--brown-dark);margin:0}
+.date{text-align:right;white-space:nowrap;color:var(--muted);padding-top:5px}
+.experience-card ul{padding-left:20px;margin:15px 0}
+.experience-card li{font:12px/1.85 Arial,sans-serif;color:var(--muted);padding-left:3px;margin:4px 0}
+.tools-label{font:9px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--brown-dark);margin:17px 0 9px}
+.tags,.skill-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag,.skill-chip{background:var(--cream);color:var(--brown-dark);padding:6px 10px;font:10px Arial,sans-serif;letter-spacing:.35px}
+.skill-cloud{margin-top:28px}
+.skill-chip{padding:9px 12px;background:#fff;border:1px solid var(--line);color:var(--navy);font-size:11px}
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
+.tool-group{background:#fff;border:1px solid var(--line);padding:22px}
+.tool-group h3{font-size:17px;font-weight:400;color:var(--navy);margin:0 0 13px}
+.contact{background:var(--navy);color:#fff;text-align:center;padding:75px 8%}
+.contact h2{color:#fff;margin:12px 0}
+.contact p{font:13px/1.8 Arial,sans-serif;color:#dbe1e8}
+.contact-links{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:25px 0;font:13px Arial,sans-serif}
+.contact-links a{color:#e1c9ac;border-bottom:1px solid rgba(225,201,172,.5);padding-bottom:4px}
+footer{background:#0d1b2d;color:#aeb8c4;text-align:center;padding:18px;font:10px Arial,sans-serif;letter-spacing:1px}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:28px}}
+@media(max-width:650px){.topbar{position:static;align-items:flex-start;flex-direction:column;padding:16px 6%}nav{justify-content:flex-start;gap:12px}.hero{padding:75px 7%}.section{padding:58px 7%}.cards,.tools-grid{grid-template-columns:1fr}.experience-head{display:block}.date{text-align:left;white-space:normal;margin-top:7px}.experience-card{padding:23px 20px}.contact{padding:58px 7%}}
+@media print{.topbar{position:static}.hero,.contact{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Lily June Varca <span style="color:#cbb293">/ Portfolio</span></div>
+  <nav>
+    <a href="#about">About Me</a><a href="#what-i-do">What I Do</a><a href="#experience">Experience</a><a href="#work">Selected Work</a><a href="#skills">Skills & Tools</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <div class="eyebrow">Professional Portfolio · Virtual & Administrative Support</div>
+  <h1>Lily June<br><span style="color:#d6bea1">Varca</span></h1>
+  <p class="subtitle">A professional background in e-commerce product listing administration, training coordination, executive assistance, online assessment, and guest services.</p>
+  <div class="hero-actions"><a class="btn primary" href="#experience">View Experience</a><a class="btn" href="#contact">Contact Me</a></div>
+</section>
+
+<section class="section" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-label">01 / About Me</div>
+      <h2>Reliable support grounded in experience.</h2>
+      <p class="about-copy">I am a virtual and administrative support professional with experience in e-commerce product listing administration, employee training coordination, executive assistance, online assessment, and hotel guest services. My work has included managing more than 500 WooCommerce product listings, maintaining product data accuracy, coordinating onboarding schedules, organizing records, and assisting customers and students.</p>
+    </div>
+    <aside class="about-note">“I value accuracy, organization, clear communication, and thoughtful follow-through.”</aside>
+  </div>
+</section>
+
+<section class="section alt" id="what-i-do">
+  <div class="inner">
+    <div class="section-label">02 / What I Do</div>
+    <h2>Areas of experience</h2>
+    <p class="intro">These areas reflect the responsibilities described in my professional experience.</p>
+    <div class="cards"><article class="card"><div class="card-kicker">01</div><h3>E-commerce Product Listing Administration</h3><p>Managed WooCommerce product listings, maintained pricing and inventory details, prepared shipping quotations, assisted with order processing, and edited product images using Canva.</p></article><article class="card"><div class="card-kicker">02</div><h3>Training Coordination</h3><p>Coordinated onboarding and training schedules, created employee accounts and training credentials, maintained onboarding documentation, and supported recruitment activities.</p></article><article class="card"><div class="card-kicker">03</div><h3>Administrative Assistance</h3><p>Managed executive calendars, scheduled appointments, processed invoices and purchase orders, organized digital files, prepared reports, and communicated with clients.</p></article><article class="card"><div class="card-kicker">04</div><h3>Online Assessment &amp; Student Support</h3><p>Assessed online course submissions, reviewed video assessments, maintained student records and AVETMISS reporting, and provided technical support to students.</p></article><article class="card"><div class="card-kicker">05</div><h3>Guest Services</h3><p>Assisted local and international hotel guests, managed reservations, coordinated guest requests, and trained new employees and interns on hotel procedures.</p></article></div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="section-label">03 / Professional Experience</div>
+  <h2>Professional Experience</h2>
+  <p class="intro">Five roles, with employment details, responsibilities, and tools presented from the information provided.</p>
+  <div class="experience-list">
+    
+      <article class="experience-card">
+        <div class="number">01</div>
+        <div class="experience-head">
+          <div>
+            <h3>Virtual Assistant / Product Listing Admin</h3>
+            <p class="company">Independent Contractor <span>·</span> Work Setup: Remote</p>
+          </div>
+          <div class="date">January 22, 2024 – October 2, 2026</div>
+        </div>
+        <ul><li>Managed and optimized over 500 WooCommerce product listings, ensuring accurate pricing, inventory, and product descriptions.</li><li>Maintained 99% product data accuracy through regular quality checks and inventory updates.</li><li>Prepared shipping quotations and assisted with order processing to improve operational efficiency.</li><li>Edited and standardized product images using Canva for consistent branding.</li><li>Responded to customer inquiries and completed administrative tasks while collaborating with clients to improve workflow efficiency.</li></ul>
+        <p class="tools-label">Tools Used</p>
+        <div class="tags"><span class="tag">WooCommerce</span><span class="tag">Canva</span><span class="tag">Google Workspace</span><span class="tag">Microsoft Excel</span><span class="tag">ChatGPT</span></div>
+      </article>
+      <article class="experience-card">
+        <div class="number">02</div>
+        <div class="experience-head">
+          <div>
+            <h3>Training Specialist/Coordinator</h3>
+            <p class="company">Strategic Office Support <span>·</span> Work Setup: Remote</p>
+          </div>
+          <div class="date">December 12, 2022 – January 8, 2024</div>
+        </div>
+        <ul><li>Coordinated onboarding and training schedules for newly hired employees.</li><li>Created employee accounts, training credentials, and maintained onboarding documentation.</li><li>Collaborated with HR and Workforce Management to ensure smooth training operations.</li><li>Maintained employee productivity reports using ActivTrak.</li><li>Assisted with recruitment interviews, candidate evaluations, and process documentation.</li></ul>
+        <p class="tools-label">Tools Used</p>
+        <div class="tags"><span class="tag">ActivTrak</span><span class="tag">Google Workspace</span><span class="tag">Microsoft Office</span><span class="tag">Zoom</span><span class="tag">Trainual</span><span class="tag">VGM Education</span></div>
+      </article>
+      <article class="experience-card">
+        <div class="number">03</div>
+        <div class="experience-head">
+          <div>
+            <h3>Admin Assistant</h3>
+            <p class="company">Restorite AU <span>·</span> Work Setup: Remote</p>
+          </div>
+          <div class="date">May 30, 2022 – October 31, 2022</div>
+        </div>
+        <ul><li>Managed executive calendars and scheduled appointments efficiently.</li><li>Processed invoices and purchase orders with high accuracy.</li><li>Organized digital filing systems for easy document retrieval.</li><li>Conducted market research and generated business leads.</li><li>Prepared reports and maintained professional communication with clients via email and phone.</li></ul>
+        <p class="tools-label">Tools Used</p>
+        <div class="tags"><span class="tag">Jobber</span><span class="tag">Microsoft Excel</span></div>
+      </article>
+      <article class="experience-card">
+        <div class="number">04</div>
+        <div class="experience-head">
+          <div>
+            <h3>Lead Assessor</h3>
+            <p class="company">Club Training Australia <span>·</span> Work Setup: Remote</p>
+          </div>
+          <div class="date">January 1, 2018 – May 27, 2022</div>
+        </div>
+        <ul><li>Assessed online hospitality and compliance course submissions.</li><li>Reviewed video assessments and maintained assessment quality standards.</li><li>Provided technical support to students via email, phone, and live chat.</li><li>Maintained AVETMISS reporting and student records.</li><li>Collaborated with team members to improve assessment processes and student experience.</li></ul>
+        <p class="tools-label">Tools Used</p>
+        <div class="tags"><span class="tag">AVETMISS</span><span class="tag">Google Workspace</span><span class="tag">Microsoft Office</span><span class="tag">Canvas LMS</span><span class="tag">Jobready</span><span class="tag">Zoom</span><span class="tag">WooCommerce</span></div>
+      </article>
+      <article class="experience-card">
+        <div class="number">05</div>
+        <div class="experience-head">
+          <div>
+            <h3>Guest Services &amp; Administrative</h3>
+            <p class="company">Radisson Blu Hotel Cebu <span>·</span> Work Setup: Onsite</p>
+          </div>
+          <div class="date">August 1, 2010 – December 31, 2017</div>
+        </div>
+        <ul><li>Delivered exceptional customer service to local and international guests.</li><li>Managed reservations, billing, and administrative documentation.</li><li>Coordinated guest requests with internal departments to ensure timely service.</li><li>Trained newly hired employees and interns on hotel procedures.</li><li>Maintained accurate operational reports and documentation.</li></ul>
+        <p class="tools-label">Tools Used</p>
+        <div class="tags"><span class="tag">Opera PMS</span><span class="tag">Micros</span><span class="tag">PBX</span><span class="tag">Outlook</span><span class="tag">Microsoft Office</span></div>
+      </article>
+  </div>
+</section>
+
+<section class="section alt" id="work">
+  <div class="inner">
+    <div class="section-label">04 / Selected Work</div>
+    <h2>Work highlights</h2>
+    <p class="intro">Examples drawn directly from the responsibilities in my five professional roles.</p>
+    <div class="cards"><article class="card"><div class="card-kicker">01</div><h3>WooCommerce Product Listings</h3><p>Managed and optimized over 500 product listings, maintained 99% product data accuracy, and standardized product images using Canva.</p></article><article class="card"><div class="card-kicker">02</div><h3>Employee Onboarding &amp; Training</h3><p>Coordinated training schedules, created employee accounts and credentials, and maintained onboarding documentation and productivity reports.</p></article><article class="card"><div class="card-kicker">03</div><h3>Executive &amp; Administrative Support</h3><p>Managed calendars and appointments, processed invoices and purchase orders, organized digital filing systems, and prepared reports.</p></article><article class="card"><div class="card-kicker">04</div><h3>Online Course Assessment</h3><p>Assessed hospitality and compliance course submissions, reviewed video assessments, and maintained student records and reporting.</p></article><article class="card"><div class="card-kicker">05</div><h3>Hotel Guest Services</h3><p>Supported guest reservations and requests, communicated with internal departments, and assisted with training new employees and interns.</p></article></div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="section-label">05 / Skills & Tools</div>
+  <h2>Skills developed through experience</h2>
+  <p class="intro">The skills and systems below are based on the tasks performed and tools listed in my professional experience.</p>
+  <div class="skill-cloud"><span class="skill-chip">WooCommerce Product Listings</span><span class="skill-chip">Product Data Accuracy</span><span class="skill-chip">Inventory Updates</span><span class="skill-chip">Shipping Quotations</span><span class="skill-chip">Order Processing Assistance</span><span class="skill-chip">Canva Image Editing</span><span class="skill-chip">Customer Inquiries</span><span class="skill-chip">Onboarding Coordination</span><span class="skill-chip">Training Schedule Coordination</span><span class="skill-chip">Employee Account Setup</span><span class="skill-chip">Recruitment Assistance</span><span class="skill-chip">Executive Calendar Management</span><span class="skill-chip">Invoice &amp; Purchase Order Processing</span><span class="skill-chip">Digital Filing</span><span class="skill-chip">Market Research</span><span class="skill-chip">Business Lead Generation</span><span class="skill-chip">Report Preparation</span><span class="skill-chip">Online Assessment</span><span class="skill-chip">Student Records</span><span class="skill-chip">AVETMISS Reporting</span><span class="skill-chip">Student Technical Support</span><span class="skill-chip">Guest Services</span><span class="skill-chip">Reservations</span><span class="skill-chip">Employee Training</span></div>
+  <h2 style="font-size:27px;margin-top:42px">Tools Used</h2>
+  <div class="tools-grid"><div class="tool-group"><h3>E-commerce &amp; Design</h3><div class="tags"><span class="tag">WooCommerce</span><span class="tag">Canva</span></div></div><div class="tool-group"><h3>Productivity &amp; Office</h3><div class="tags"><span class="tag">Google Workspace</span><span class="tag">Microsoft Excel</span><span class="tag">Microsoft Office</span><span class="tag">Outlook</span></div></div><div class="tool-group"><h3>Training &amp; Communication</h3><div class="tags"><span class="tag">ActivTrak</span><span class="tag">Zoom</span><span class="tag">Trainual</span><span class="tag">VGM Education</span></div></div><div class="tool-group"><h3>Assessment &amp; Records</h3><div class="tags"><span class="tag">AVETMISS</span><span class="tag">Canvas LMS</span><span class="tag">Jobready</span></div></div><div class="tool-group"><h3>Hotel Systems</h3><div class="tags"><span class="tag">Opera PMS</span><span class="tag">Micros</span><span class="tag">PBX</span></div></div><div class="tool-group"><h3>Other</h3><div class="tags"><span class="tag">ChatGPT</span><span class="tag">Jobber</span></div></div></div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-label">06 / Contact</div>
+  <h2>Let's connect.</h2>
+  <p>For professional opportunities and inquiries:</p>
+  <div class="contact-links">
+    <a href="mailto:lijune.varca@gmail.com">lijune.varca@gmail.com</a>
+    <a href="https://wa.me/639432321689" target="_blank" rel="noopener">WhatsApp: +63 943 232 1689</a>
+  </div>
+</section>
+</main>
+<footer>© 2026 LILY JUNE VARCA · PROFESSIONAL PORTFOLIO</footer>
+</body>
+</html>
